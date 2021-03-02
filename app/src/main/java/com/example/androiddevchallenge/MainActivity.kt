@@ -59,7 +59,7 @@ fun MyApp(appThemeState: MutableState<AppThemeState>, systemUiController: System
         composable(Constants.Routes.PUPPY_LIST) { PuppyList(navController = navController, appThemeState = appThemeState) }
         composable(Constants.Routes.PUPPY_DETAILS_FORMAT, arguments = listOf(navArgument(Constants.Arguments.PUPPY_INDEX) {type = NavType.IntType})) {
             val puppyIndex = it.arguments?.getInt(Constants.Arguments.PUPPY_INDEX)!!
-            PuppyDetails(Puppies.getPuppy(puppyIndex))
+            PuppyDetails(navController, Puppies.getPuppy(puppyIndex))
         }
     }
 }
