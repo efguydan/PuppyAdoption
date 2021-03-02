@@ -92,7 +92,7 @@ object Puppies {
     private val berkay = Puppy(
         id = 12,
         name = "Berkay",
-        imageRes = R.drawable.karsten_winegeart,
+        imageRes = R.drawable.berkay_gumustekin,
         description = ""
     )
 
@@ -124,7 +124,7 @@ object Puppies {
         description = ""
     )
 
-    fun get() = listOf(
+    private val allPuppies = listOf(
         bill,
         tr,
         erin,
@@ -143,5 +143,9 @@ object Puppies {
         part,
         nord
     )
+
+    fun get() = allPuppies
+
+    fun getPuppy(index: Int): Puppy = allPuppies[index]
 
 }
