@@ -48,7 +48,6 @@ fun PuppyDetails(navController: NavController?, puppy: Puppy) {
         Box {
             ImageRes(
                 res = puppy.imageRes,
-                alignment = BiasAlignment(0f, -1 * scrollState.value / 100f),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(400.dp)
