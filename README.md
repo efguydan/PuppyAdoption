@@ -10,8 +10,8 @@ This Repository contains the code for Week 1 of the #AndroidDevChallenge. A pupp
 I wanted to keep the design quite simple and elegant, hence the 2 columned grid view and the simplified details page, the colors hopefully doing most of the design work.
 
 ## :camera_flash: Screenshots
-<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
-<img src="/results/screenshot_3.png" width="260">&emsp;<img src="/results/screenshot_4.png" width="260">
+<img src="/results/screenshot_1.png" width="350">&emsp;<img src="/results/screenshot_2.png" width="350">
+<img src="/results/screenshot_3.png" width="350">&emsp;<img src="/results/screenshot_4.png" width="350">
 
 ## License
 ```
