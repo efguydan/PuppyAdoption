@@ -50,12 +50,14 @@ fun PuppyDetails(navController: NavController?, puppy: Puppy) {
                     .fillMaxWidth()
                     .height(400.dp)
             )
-            IconButton(onClick = {
-                navController?.popBackStack()
-            }, modifier = Modifier
-                .padding(8.dp)
-                .clip(CircleShape)
-                .background(Color.Black.copy(alpha = 0.1f))) {
+            IconButton(
+                onClick = {
+                    navController?.popBackStack()
+                }, modifier = Modifier
+                    .padding(8.dp)
+                    .clip(CircleShape)
+                    .background(Color.Black.copy(alpha = 0.1f))
+            ) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_baseline_arrow_back_24),
                     contentDescription = null,
@@ -86,7 +88,11 @@ fun PuppyDetails(navController: NavController?, puppy: Puppy) {
                 )
             }
             Spacer(modifier = Modifier.weight(1.0f))
-            ExpandableFAB(iconRes = R.drawable.ic_adopt, text = stringResource(id = R.string.adopt), modifier = Modifier.align(Alignment.CenterVertically))
+            ExpandableFAB(
+                iconRes = R.drawable.ic_adopt,
+                text = stringResource(id = R.string.adopt),
+                modifier = Modifier.align(Alignment.CenterVertically)
+            )
         }
         Text(
             text = puppy.description,

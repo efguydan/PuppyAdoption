@@ -41,7 +41,8 @@ fun PuppyList(navController: NavController, appThemeState: MutableState<AppTheme
                     Text(
                         text = stringResource(id = R.string.adopt_me_exclamation),
                         color = MaterialTheme.colors.contentColorFor(MaterialTheme.colors.background)
-                    )},
+                    )
+                },
                 elevation = 4.dp,
                 backgroundColor = MaterialTheme.colors.background,
                 actions = {
@@ -58,15 +59,19 @@ fun PuppyList(navController: NavController, appThemeState: MutableState<AppTheme
             )
         }
     ) {
-        VerticalGrid(modifier = Modifier
-            .padding(horizontal = 4.dp)
-            .verticalScroll(enabled = true, state = rememberScrollState())) {
+        VerticalGrid(
+            modifier = Modifier
+                .padding(horizontal = 4.dp)
+                .verticalScroll(enabled = true, state = rememberScrollState())
+        ) {
             Puppies.get().mapIndexed { index, puppy ->
                 SinglePuppyItem(
                     puppy = puppy,
-                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp).clickable {
-                        navController.navigate(getPuppyDetailsRoute(index))
-                    }
+                    modifier = Modifier
+                        .padding(horizontal = 4.dp, vertical = 4.dp)
+                        .clickable {
+                            navController.navigate(getPuppyDetailsRoute(index))
+                        }
                 )
             }
         }
